@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Dataset
+data/
+*.csv
+*.parquet
+
+# Processed data
+processed/
+
+# Trained models
+models/
+*.pt
+*.pth
+*.ckpt
+
+# NumPy generated files
+*.npy
+*.npz
+
+# Generated results
+outputs/
+netguard_results/
+
+# Environment / secrets
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
