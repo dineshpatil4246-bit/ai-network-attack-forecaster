@@ -15,10 +15,12 @@ data/
 *.parquet
 
 # Processed data
-processed/
+# Keep training outputs out of Git, except the two small inference assets used by app.py.
+processed/*
 
 # Trained models
-models/
+# Keep training outputs out of Git, except the deployed inference model and config.
+models/*
 *.pt
 *.pth
 *.ckpt
@@ -42,3 +44,9 @@ netguard_results/
 # OS
 .DS_Store
 Thumbs.db
+
+# Streamlit Community Cloud runtime assets
+!models/model_config.json
+!models/world_model_best.pt
+!processed/feature_names.json
+!processed/scaler.pkl

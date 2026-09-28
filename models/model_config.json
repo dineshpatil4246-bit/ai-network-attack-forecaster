@@ -1,0 +1,12 @@
+{
+  "num_features": 20,
+  "num_classes": 3,
+  "seq_len": 20,
+  "target_names": [
+    "Benign",
+    "DoS/DDoS",
+    "PortScan/BruteForce"
+  ],
+  "best_val_f1": 0.9988,
+  "best_val_acc": 99.9
+}
