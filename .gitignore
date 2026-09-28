@@ -1,3 +1,4 @@
+
 # Python
 __pycache__/
 *.pyc
@@ -9,29 +10,36 @@ venv/
 .venv/
 env/
 
-# Dataset
+# Raw datasets
 data/
 *.csv
 *.parquet
 
-# Processed data
-# Keep training outputs out of Git, except the two small inference assets used by app.py.
-processed/*
+# Large processed training data
+processed/X_sequences.npy
+processed/y_labels.npy
 
-# Trained models
-# Keep training outputs out of Git, except the deployed inference model and config.
-models/*
-*.pt
-*.pth
-*.ckpt
-
-# NumPy generated files
-*.npy
-*.npz
+# Large/generated model files
+models/*.pth
+models/*.ckpt
 
 # Generated results
 outputs/
 netguard_results/
+
+# NumPy files
+*.npy
+*.npz
+
+# Allow Streamlit deployment artifacts
+!models/
+!models/model_config.json
+!models/world_model_best.pt
+
+!processed/
+!processed/feature_names.json
+!processed/label_mapping.json
+!processed/scaler.pkl
 
 # Environment / secrets
 .env
@@ -44,9 +52,3 @@ netguard_results/
 # OS
 .DS_Store
 Thumbs.db
-
-# Streamlit Community Cloud runtime assets
-!models/model_config.json
-!models/world_model_best.pt
-!processed/feature_names.json
-!processed/scaler.pkl
